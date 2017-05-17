@@ -56,7 +56,7 @@ you need:
 - Zlib
 
 If you use a recent flavour of Linux, you should be able to use the
-packaged development versions of these libraries. The We have tested
+packaged development versions of these libraries. We have tested
 the SDK under Ubuntu zesty.
 
 The SDK embed the [restc-cpp](https://github.com/jgaa/restc-cpp) C++ REST
