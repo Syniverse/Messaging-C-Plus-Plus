@@ -6,7 +6,7 @@ different REST API interfaces.
 
 The C++ API hides some of the REST API's constraints, like
 lists being returned in logical pages of <i>n</i> records. With the
-C++ SDK, the List() method returns a iterator that returns
+C++ SDK, the List() method returns an iterator that returns
 items, until there are no more.
 
 ## How to use the SDK
@@ -53,7 +53,7 @@ you need:
 
 - Boost
 - OpenSSL
-- Zlib installed.
+- Zlib
 
 If you use a recent flavour of Linux, you should be able to use the
 packaged development versions of these libraries. The We have tested
@@ -67,6 +67,16 @@ library.
 ```sh
 $ git submodule update --init --recursive
 ```
+
+To compile the project, from the projects top directory:
+```sh
+mkdir build
+cd build
+cmake ..
+make
+cd ..
+```
+
 
 # Some simple examples
 
