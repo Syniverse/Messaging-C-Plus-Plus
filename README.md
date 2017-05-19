@@ -1,6 +1,6 @@
 
-# What is this?
-This is the C++ version of the SCG API.
+# SCG C++ SDK
+This is the C++ version of the SCG API.The SCG APIs provides access to communication channels using SMS, MMS, Push Notification, OTT messaging and Voice.
 We have prepared simple to use C++ classes, representing the
 different REST API interfaces.
 
