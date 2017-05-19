@@ -13,8 +13,8 @@ namespace scg_api {
 template <typename T>
 struct ListReturnMapper {
     std::vector<T> list;
-    int limit = 0;
-    int total = 0;
+	int64_t limit = 0;
+	int64_t total = 0;
 };
 
 /*! Simple forward iteratable result-set.
@@ -105,7 +105,7 @@ public:
     using iterator = AsyncForwardIterator;
     using list_return_mappert_t = ListReturnMapper<T>;
     using list_t = std::unique_ptr<list_return_mappert_t>;
-    using fetch_fn_t = std::function<list_t(int offset)>;
+    using fetch_fn_t = std::function<list_t(int64_t offset)>;
 
     /*! \internal */
     AsyncForwardList(fetch_fn_t fetch_fn,
@@ -206,6 +206,6 @@ BOOST_FUSION_ADAPT_TPL_STRUCT(
     (T),
     (scg_api::ListReturnMapper)(T),
     (typename BOOST_IDENTITY_TYPE((std::vector<T>)), list)
-    (int, limit)
-    (int, total)
+    (std::int64_t, limit)
+    (std::int64_t, total)
 )

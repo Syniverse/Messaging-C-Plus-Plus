@@ -14,7 +14,7 @@ namespace scg_api {
 AuthInfo::AuthInfo(const boost::filesystem::path& jsonConfig) {
     if (!boost::filesystem::is_regular(jsonConfig)) {
         throw runtime_error(string("Failed to open configuration file: ") 
-            + jsonConfig.native());
+            + jsonConfig.string());
     }
     
     ifstream ifs(jsonConfig.native());

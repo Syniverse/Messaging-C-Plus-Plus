@@ -355,7 +355,7 @@ protected:
             start_offset = lp->start_offset;
         }
 
-        return list_t{[this, headers, args] (int offset) mutable {
+        return list_t{[this, headers, args] (int64_t offset) mutable {
 
             static const std::string offset_name = "offset";
 
