@@ -89,7 +89,7 @@ public:
      *
      * Not used for this class
      */
-    void SetResource(Resource */*res*/) noexcept { }
+    void SetResource(Resource * /*res*/) noexcept { }
 };
 
 } // namespace

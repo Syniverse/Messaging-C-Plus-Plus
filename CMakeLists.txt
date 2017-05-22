@@ -26,7 +26,7 @@ endif()
 
 if (WIN32)
 	add_definitions(-D_WIN32_WINNT=0x0600)
-            set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SAFESEH:NO")
+	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SAFESEH:NO")
 endif()
 
 add_subdirectory(externals/restc-cpp)
@@ -44,11 +44,8 @@ add_definitions(-DBOOST_COROUTINE_NO_DEPRECATION_WARNING=1)
 
 if (WIN32)
 	set(Boost_USE_STATIC_LIBS ON)
-	find_package(Boost REQUIRED COMPONENTS program_options)
+	find_package(Boost REQUIRED)
 	include_directories(${Boost_INCLUDE_DIRS})
-	if (WIN32)
-		link_directories(${Boost_LIBRARY_DIRS})
-	endif()
 endif()
 
 add_subdirectory(src)

@@ -1,6 +1,13 @@
 project(scgapi-examples)
 
 if (WIN32)
+	find_package(Boost REQUIRED COMPONENTS program_options)
+	include_directories(${Boost_INCLUDE_DIRS})
+	link_directories(${Boost_LIBRARY_DIRS})
+endif()
+
+
+if (WIN32)
 	set(REQUIRED_LIBRARIES 
 		debug ${Boost_PROGRAM_OPTIONS_LIBRARY_DEBUG} optimized ${Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE}
 	)
