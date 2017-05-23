@@ -29,6 +29,12 @@ if (WIN32)
 	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SAFESEH:NO")
 endif()
 
+if (APPLE)
+    add_definitions(-std=c++14)
+    find_package(Boost REQUIRED)
+    include_directories(${Boost_INCLUDE_DIRS})
+endif()
+
 add_subdirectory(externals/restc-cpp)
 
 include_directories(
@@ -41,6 +47,7 @@ include_directories(
 
 # Asio trigger deprecation warnings
 add_definitions(-DBOOST_COROUTINE_NO_DEPRECATION_WARNING=1)
+
 
 if (WIN32)
 	set(Boost_USE_STATIC_LIBS ON)
