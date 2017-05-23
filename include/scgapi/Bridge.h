@@ -66,7 +66,7 @@ public:
         }
 
         auto Create() {
-            const Bridge br;
+            Bridge br;
             return Create_(br);
         }
 
