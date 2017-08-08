@@ -9,6 +9,8 @@ lists being returned in logical pages of <i>n</i> records. With the
 C++ SDK, the List() method returns an iterator that returns
 items, until there are no more.
 
+Please register for a free account at https://developer.syniverse.com to get your API keys.
+
 ## How to use the SDK
 All the data objects follow a common pattern.
 
